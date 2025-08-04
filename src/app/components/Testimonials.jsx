@@ -5,7 +5,7 @@ function Testimonials() {
     <div>
       <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white text-center py-3 px-4 mb-4">
         <h2 className="text-xl md:text-2xl font-bold">
-          {"আমাদের কাস্টমারদের লিভিড সমূহ"}
+          {"আমাদের কাস্টমারদের রিভিউ সমূহ"}
         </h2>
       </div>
 

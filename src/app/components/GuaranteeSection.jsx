@@ -23,12 +23,6 @@ function GuaranteeSection() {
           <div className="flex items-start">
             <span className="text-orange-500 mr-3 text-xl">✓</span>
             <p className="text-gray-700">
-              {"শুধু মাত্র ৯৯ টাকা ডেলিভারি চার্জ।"}
-            </p>
-          </div>
-          <div className="flex items-start">
-            <span className="text-orange-500 mr-3 text-xl">✓</span>
-            <p className="text-gray-700">
               {"সারা বাংলাদেশে হোম ডেলিভারি সুবিধা আছে।"}
             </p>
           </div>
