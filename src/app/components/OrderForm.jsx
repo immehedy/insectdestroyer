@@ -50,6 +50,8 @@ function OrderForm() {
           address,
           product: selectedProduct,
           deliveryLocation,
+          deliveryPrice: shippingCost,
+          totalPrice,
         }),
       })
 
