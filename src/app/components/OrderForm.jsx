@@ -2,22 +2,7 @@
 
 import React, { useState } from "react";
 
-const products = [
-  {
-    id: "product1",
-    label: "২ পিস ছারপোকা মারার স্প্রে (৫০০ml)",
-    quantity: "৫০০ml",
-    price: 690,
-  },
-  {
-    id: "product2",
-    label: "৩ পিস ছারপোকা মারার স্প্রে (৫০০ml)",
-    quantity: "৫০০ml",
-    price: 990,
-  },
-];
-
-function OrderForm() {
+function OrderForm({products}) {
   const [selectedProduct, setSelectedProduct] = useState(products[0]);
   const [deliveryLocation, setDeliveryLocation] = useState("inside");
   const [name, setName] = useState("");
