@@ -4,7 +4,7 @@ import { CTAButtons } from "./components/CTABtn";
 import FacebookComments from "./components/FacebookComments";
 import Footer from "./components/Footer";
 import GuaranteeSection from "./components/GuaranteeSection";
-import Logo from "./components/logo";
+import Logo from "./components/Logo";
 import OrderBtn from "./components/OrderBtn";
 import OrderForm from "./components/OrderForm";
 import Pricing from "./components/Pricing";
