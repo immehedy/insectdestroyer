@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Insectc Destroyer",
-  description: "ছারপোকার সমস্যার স্থায়ী সমাধান | Charpokar problem",
+  description: "ছারপোকার সমস্যার স্থায়ী সমাধান | Charpokar problem | Insectc Destroyer",
 };
 
 export default function RootLayout({ children }) {
