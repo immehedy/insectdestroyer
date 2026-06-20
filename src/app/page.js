@@ -47,7 +47,10 @@ export default async function Home() {
           title3={null}
         />
 
-        <VideoSection video={content?.introVideo} bannerImage="/banner-image.png"/>
+        <VideoSection
+          video={content?.introVideo}
+          bannerImage="/banner-image.png"
+        />
 
         <OrderBtn />
 
@@ -93,7 +96,7 @@ export default async function Home() {
           productImage="/product-headshot.png"
         />
 
-        <Contact helpLine={content?.helpLine} />
+        <Contact helpLine="01704533451" />
 
         <div className="bg-white border-2 border-black rounded-t-xl px-3 py-5 mt-8">
           <h2 className="text-center text-xl md:text-3xl font-black leading-snug">
@@ -104,7 +107,7 @@ export default async function Home() {
 
         <OrderForm products={cockroachProducts} />
 
-        <Footer helpLine={content?.helpLine} />
+        <Footer helpLine="01704533451" />
       </div>
     </main>
   );
