@@ -24,13 +24,13 @@ export default async function Home() {
   const cockroachProducts = [
     {
       id: "single-400ml",
-      label: "১ পিস ছারপোকার বোতল",
+      label: "১ পিস Z.Killer Power Spray বোতল",
       quantity: "400ml",
       price: 550,
     },
     {
       id: "double-400ml",
-      label: "২ পিস ছারপোকার বোতল",
+      label: "২ পিস Z.Killer Power Spray বোতল",
       quantity: "400ml × 2",
       price: 950,
     },
@@ -47,7 +47,7 @@ export default async function Home() {
           title3={null}
         />
 
-        <VideoSection video={content?.introVideo} bannerImage="/banner.png" />
+        <VideoSection video={content?.introVideo} bannerImage="/banner-image.png"/>
 
         <OrderBtn />
 
@@ -79,17 +79,18 @@ export default async function Home() {
           productPrices={{
             plans: [
               {
-                name: "Insect Destroyer 400ml ১ পিস",
+                name: "Z. Killer Power 400ml ১ পিস",
                 regularPrice: 690,
                 offerPrice: 550,
               },
               {
-                name: "Insect Destroyer 400ml ২ পিস",
+                name: "Z. Killer Power 400ml ২ পিস",
                 regularPrice: 1190,
                 offerPrice: 950,
               },
             ],
           }}
+          productImage="/product-headshot.png"
         />
 
         <Contact helpLine={content?.helpLine} />

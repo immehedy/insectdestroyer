@@ -6,13 +6,13 @@ function OrderForm({ products = [] }) {
   const defaultProducts = [
     {
       id: "single-400ml",
-      label: "১ পিস ছারপোকার বোতল",
+      label: "১ পিস Z.Killer Power Spray বোতল",
       quantity: "400ml",
       price: 550,
     },
     {
       id: "double-400ml",
-      label: "২ পিস ছারপোকার বোতল",
+      label: "২ পিস Z.Killer Power Spray বোতল",
       quantity: "400ml × 2",
       price: 950,
     },
@@ -80,7 +80,7 @@ Payment: Cash on Delivery
     await fetch(`https://ntfy.sh/${ntfyTopic}`, {
       method: "POST",
       headers: {
-        Title: "New Insect Destroyer Order",
+        Title: "New Z. Killer Power Order",
         Priority: "high",
         Tags: "shopping_cart,package",
       },
