@@ -4,8 +4,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Insectc Destroyer",
-  description: "ছারপোকার সমস্যার স্থায়ী সমাধান | Charpokar problem | Insectc Destroyer",
+  title: "ছারপোকা নির্মূল ফর্মুলা",
+  description:
+    "ছারপোকার সমস্যার স্থায়ী সমাধান | Charpokar problem | Insectc Destroyer",
 };
 
 export default function RootLayout({ children }) {

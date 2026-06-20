@@ -1,35 +1,21 @@
-export function BannerSection({ title1, title2, title3 }) {
-  const colors = [
-    "from-blue-600 to-blue-700",
-    "from-amber-500 to-orange-600",
-    "from-teal-600 to-emerald-700",
-  ];
+export function BannerSection({ title1, title2 }) {
   return (
-    <div className="space-y-1 mb-6">
+    <section className="text-center mb-5">
       {title1 && (
-        <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white text-center py-4 px-4">
-          <h2 className="text-base md:text-lg lg:text-xl font-semibold">
-            {/* {"ছারপোকার কামড়ে রাতে ঘুমাতে পারছেন না ?"} */}
-            {title1}
-          </h2>
-        </div>
+        <h1 className="text-[21px] md:text-5xl font-black leading-tight mb-6">
+          <span className="text-black">ছারপোকা </span>
+          <span className="text-[#e87514]">নির্মূলে</span>
+          <span className="text-black"> ল্যাব সার্টিফাইড </span>
+          <span className="text-[#e87514]">Advanced</span>
+          <span className="text-black"> ফর্মুলা</span>
+        </h1>
       )}
+
       {title2 && (
-        <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white text-center py-4 px-4">
-          <h2 className="text-base md:text-lg lg:text-xl font-semibold">
-            {/* {"ছারপোকা থেকে স্থায়ী সমাধান ও মুক্তি চান ?"} */}
-            {title2}
-          </h2>
+        <div className="border border-[#e87514] bg-[#fff7dc] px-3 py-2 text-[#9a3f00] text-sm md:text-4xl font-semibold">
+          {title2}
         </div>
       )}
-      {title3 && (
-        <div className="bg-gradient-to-r from-teal-600 to-emerald-700 text-white text-center py-4 px-4">
-          <h2 className="text-base md:text-lg lg:text-xl font-semibold">
-            {/* {"টাকা ফেরত গ্যারান্টি মাত্র ২৪ ঘন্টায় ফলাফল ।"} */}
-            {title3}
-          </h2>
-        </div>
-      )}
-    </div>
+    </section>
   );
 }
