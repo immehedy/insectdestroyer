@@ -10,7 +10,6 @@ export default function Logo() {
           alt="Insectc Destroyer Logo"
           width={150}
           height={150}
-          objectFit="cover"
         />
       </Link>
     </div>

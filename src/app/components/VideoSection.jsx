@@ -118,7 +118,7 @@ export function VideoSection({ video, bannerImage }) {
         ) : shouldShowBanner ? (
           <Image
             src={bannerFile.url}
-            alt={bannerFile.title || "Insect Destroyer bed bug spray banner"}
+            alt={bannerFile.title || "Z. Killer Power bed bug spray banner"}
             fill
             priority
             sizes="(max-width: 768px) 100vw, 768px"
