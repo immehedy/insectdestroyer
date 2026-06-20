@@ -18,72 +18,93 @@ export default async function Home() {
   const res = await contentfulClient?.getEntries({
     content_type: "insectdestroyerLanding",
   });
-  const content = res.items[0].fields;
+
+  const content = res?.items?.[0]?.fields || {};
+
+  const cockroachProducts = [
+    {
+      id: "single-400ml",
+      label: "১ পিস ছারপোকার বোতল",
+      quantity: "400ml",
+      price: 550,
+    },
+    {
+      id: "double-400ml",
+      label: "২ পিস ছারপোকার বোতল",
+      quantity: "400ml × 2",
+      price: 950,
+    },
+  ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-6">
-        {/* Logo Section */}
+    <main className="min-h-screen bg-[#fbf9d9] text-[#151515]">
+      <div className="max-w-[430px] md:max-w-7xl mx-auto px-3 py-2">
         <Logo />
 
-        {/* Banner Messages */}
         <BannerSection
-          title1={content?.title1}
-          title2={content?.title2}
-          title3={content?.title3}
+          title1="ছারপোকা নির্মূলে ল্যাব সার্টিফাইড Advanced ফর্মুলা"
+          title2="এটি ছারপোকার বিরুদ্ধে ১০০% কার্যকরী ও দীর্ঘস্থায়ী এর সমাধান"
+          title3={null}
         />
 
-        {/* Main Video Section */}
-        <VideoSection video={content?.introVideo} />
+        <VideoSection video={content?.introVideo} bannerImage="/banner.png" />
 
-        {/* Call to Action Buttons */}
-        <CTAButtons />
-
-        {/* Product Benefits Section */}
-        <ProductBenefits
-          whyWouldItWork={content?.whyWouldItWork}
-          mediaTitle={content?.whyWouldItWorkMediaTitle}
-          mediaSubtitle={content?.whyWouldItWorkMediaSubTitle}
-          media={content?.whyWouldItWorkMedia}
-        />
-
-        {/* Order Button */}
         <OrderBtn />
 
-        {/* Guarantee Section */}
+        <ProductBenefits
+          whyWouldItWork={{
+            title: "আমাদের স্প্রেটি কেন ব্যবহার করবেন?",
+            benefits: [
+              "দীর্ঘস্থায়ী কার্যকর — একবার স্প্রে করলে দীর্ঘ সময় কাজ করে।",
+              "সুরক্ষিত ও নির্ভরযোগ্য — ঘরোয়া ব্যবহারের জন্য উপযোগী।",
+              "সহজ ব্যবহার — স্প্রে করা সহজ এবং দ্রুত।",
+              "নিজস্ব ফর্মুলা — আমদানি করা স্প্রে নয়, আমাদের নিজস্বভাবে তৈরি কার্যকরী ফর্মুলা।",
+              "দ্রুত ফলাফল — ছারপোকা নিয়ন্ত্রণে দ্রুত কাজ করে।",
+              "নিয়মিত ব্যবহার — দীর্ঘদিন রেখে ব্যবহারে ভালো ফল পাওয়া যায়।",
+            ],
+          }}
+        />
+
+        <OrderBtn />
+
         <GuaranteeSection guarantees={content?.guarantees} />
 
-        {/* Order Button */}
         <OrderBtn />
 
-        {/* Customer Testimonials */}
-        {content?.reviewMedias && <Testimonials reviews={content?.reviewMedias} />}
+        {content?.reviewMedias && (
+          <Testimonials reviews={content.reviewMedias} />
+        )}
 
-        {/* Facebook Comments Simulation */}
-        {/* <FacebookComments /> */}
+        <Pricing
+          productPrices={{
+            plans: [
+              {
+                name: "Insect Destroyer 400ml ১ পিস",
+                regularPrice: 690,
+                offerPrice: 550,
+              },
+              {
+                name: "Insect Destroyer 400ml ২ পিস",
+                regularPrice: 1190,
+                offerPrice: 950,
+              },
+            ],
+          }}
+        />
 
-        {/* Pricing Section */}
-        <Pricing productPrices={content?.productPrices} />
-
-        {/* Why Choose Us */}
-        <WhyChoose whyChoose={content?.whyBeliveInUs} />
-
-        {/* Contact Information */}
         <Contact helpLine={content?.helpLine} />
 
-        {/* Order Form Header */}
-        <div className="bg-gradient-to-r from-green-600 to-emerald-700 text-white text-center py-4 px-4 mb-4">
-          <h2 className="text-xl md:text-2xl font-bold">
-            {"অর্ডার করতে নিচের ফর্মটি পূরণ করুন ⬇️"}
+        <div className="bg-white border-2 border-black rounded-t-xl px-3 py-5 mt-8">
+          <h2 className="text-center text-xl md:text-3xl font-black leading-snug">
+            আপনি যদি ছারপোকা/ ছারপোকার স্প্রে নিতে চান তাহলে অর্ডার কনফার্ম করে
+            জানাবেন
           </h2>
         </div>
 
-        {/* Order Form */}
-        <OrderForm products={content?.products} />
+        <OrderForm products={cockroachProducts} />
 
-        {/* Footer Contact */}
         <Footer helpLine={content?.helpLine} />
       </div>
-    </div>
+    </main>
   );
 }

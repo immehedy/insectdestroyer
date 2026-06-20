@@ -1,9 +1,13 @@
-
 function OrderBtn() {
   return (
-    <div className="text-center mb-8">
-      <a href="#order-form" className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
-        {"🛒 অর্ডার করুন এখনি অর্ডার"}
+    <div className="text-center my-4">
+      <a
+        href="#order-form"
+        className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-full text-4xl font-bold shadow hover:scale-105 transition">
+        অর্ডার করতে চাই
+        <span className="bg-white text-black rounded-full w-5 h-5 flex items-center justify-center text-xs">
+          ➜
+        </span>
       </a>
     </div>
   );
